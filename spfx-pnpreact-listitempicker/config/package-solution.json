@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-pnpreact-listitempicker-client-side-solution",
+    "id": "3e0d1b0c-378f-4fd3-afbc-0587b23abd1e",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-pnpreact-listitempicker.sppkg"
+  }
+}

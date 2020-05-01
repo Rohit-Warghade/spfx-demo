@@ -11,8 +11,30 @@
       ]
     }
   },
-  "externals": {},
+  "externals": {
+    "jquery": {
+      "path": "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js",
+      "globalName": "jquery"
+    },
+    "bootstrap": {
+      "path": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
+      "globalName": "bootstrap",
+      "globalDependencies": ["jquery"]
+    },
+    "appjs": {
+      "path": "lib/webparts/helloWorld/Scripts/app.js",
+      "globalName": "appjs"
+    },
+    "sppeoplepicker": {
+      "path": "lib/webparts/helloWorld/Scripts/sp.peoplepicker.js",
+      "globalName": "sppeoplepicker"
+    },
+    "jqueryui": {
+      "path": "lib/webparts/helloWorld/Scripts/jquery-ui.js",
+      "globalName": "jqueryui"
+    }
+  },
   "localizedResources": {
-    "HelloWorldWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js"
+    "TestFormWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js"
   }
 }
