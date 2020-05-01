@@ -4,5 +4,5 @@ export interface IPnPListItemPickerProps {
   listId: string;  
   columnInternalName: string;  
   itemLimit: number;  
-  context: WebPartContext;  
+  context: WebPartContext ;  
 }  
