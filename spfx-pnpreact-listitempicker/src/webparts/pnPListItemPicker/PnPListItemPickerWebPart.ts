@@ -11,12 +11,19 @@ import * as strings from 'PnPListItemPickerWebPartStrings';
 import PnPListItemPicker from './components/PnPListItemPicker';
 import { IPnPListItemPickerProps } from './components/IPnPListItemPickerProps';
 
+import { WebPartContext } from '@microsoft/sp-webpart-base';  
+import { DisplayMode } from '@microsoft/sp-core-library';  
+
 
 
 export interface IPnPListItemPickerWebPartProps {
   listId: string;  
   columnInternalName: string;  
   itemLimit: number; 
+  
+  description: string; 
+  displayMode: DisplayMode;  
+  updateProperty: (value: string) => void;  
 }
 
 export default class PnPListItemPickerWebPart extends BaseClientSideWebPart <IPnPListItemPickerWebPartProps> {
@@ -28,7 +35,13 @@ export default class PnPListItemPickerWebPart extends BaseClientSideWebPart <IPn
         listId: this.properties.listId,  
         columnInternalName: this.properties.columnInternalName,  
         itemLimit: this.properties.itemLimit,  
-        context: this.context  
+        context: this.context,  
+
+        description: this.properties.description,  
+        displayMode: this.displayMode,  
+        updateProperty: (value: string) => {  
+          this.properties.description = value;  
+        }  
       }
     );
 
